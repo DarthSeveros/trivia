@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&family=Fredoka+One&display=swap');
+
+h1, h2 ,h3 ,h4, h5 {
+    font-family: 'Fredoka One', cursive;
+}
+
+label, p, .btn {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.btn-mora {
+    background-color: #6254FF;
+    color: white;
+}
+
+.btn-mora:hover {
+    background-color: #4439bd;
+    color: white;
+}
+
+.form-check-input:checked {
+    background-color: #6254FF;
+    border-color: #6254FF;
+}
+
+.form-check-input::selection {
+    background-color: blueviolet;
+}
+
+.form-check>input:hover, .form-check>label:hover {
+    cursor: pointer;
+}
+
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+.bg-design {
+    background-image: url('../img/top-design.svg');
+    height: 100px;
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: animatedBackground 40s linear infinite;
+}
+
+@keyframes animatedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
+}

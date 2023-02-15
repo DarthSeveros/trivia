@@ -127,7 +127,7 @@ function loadData() {
         })
         .catch(error => {
             console.log('error', error);
-            fetch("data.json")
+            fetch("js/data.json")
             .then((res) => res.json())
             .then((data) => data = data);
         });

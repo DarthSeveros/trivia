@@ -22,9 +22,10 @@
     <div class="container" style="max-width: 600px;">
         <h1 class="text-center ml2">Trivian</h1>
         <div id="inicio">
-            <h3 class="text-center">¿Cuánto sabes de geografía? <span id="quest-name"></span></h3>
+            <h3 class="text-center"><span id="quest-name"></span></h3>
             <div class="d-flex justify-content-center">
-                <button class="btn btn-mora mx-auto" onclick="completeTrivia(); $('#inicio').hide(); $('.trivia-card').show(); animateOptions();">
+                <div id="loading"></div>
+                <button id="start-button" class="btn btn-mora mx-auto" onclick="completeTrivia(); $('#inicio').hide(); $('.trivia-card').show(); animateOptions();" style="display:none">
                     Comenzar
                 </button>
             </div>

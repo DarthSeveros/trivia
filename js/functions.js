@@ -1,5 +1,6 @@
-let num = 0
-let respuestas = []
+let num = 0;
+let respuestas = [];
+data = '';
 
 $.fn.isValid = function(){
     return this[0].checkValidity()
@@ -20,15 +21,15 @@ function questionCounter(){
 function completeTrivia() {
     $(document).ready(function () {
         $(".trivia-quest-num").text("Pregunta " + (num+1));
-        $("#trivia-quest").text(data[0].questions[num].quest)
+        $("#trivia-quest").text(data.preguntas[num].texto)
         let i = 0;
         $("input.option").each( function () {
-            $(this).val(data[0].questions[num].ans[i].text);
+            $(this).val(data.preguntas[num].respuestas[i].texto);
             i++;
         });
         let j = 0;
         $("label").each( function () {
-            $(this).text(data[0].questions[num].ans[j].text);  
+            $(this).text(data.preguntas[num].respuestas[j].texto);  
             j++;
         });
         $(":checked").prop('checked', false);
@@ -45,7 +46,7 @@ function nextQuestion() {
         respuestas.push($(":checked").val());
         $(".hide-on-finish").hide();
         $("#puntuacion").show();
-        $("#puntuacion>h3>span").text(checkQuestions());
+        $("#puntuacion>h3>span").text(checkpreguntas());
         $(".siguiente").hide();
         $(".volver").show();
         return;
@@ -56,15 +57,15 @@ function nextQuestion() {
     completeTrivia();
 }
 
-function checkQuestions() {
-    let preguntas = data[0].questions;
+function checkpreguntas() {
+    let preguntas = data.preguntas;
     let correctas = preguntas.map( (question) => {
-        let corrects = question.ans;
-        corrects = corrects.filter((ans) => {
-            return ans.value === 1;
+        let corrects = question.respuestas;
+        corrects = corrects.filter((respuestas) => {
+            return respuestas.valor === 1;
         });
-        let lista = corrects.reduce((total, ansRight) => {
-            return total.concat(ansRight.text);
+        let lista = corrects.reduce((total, respuestasRight) => {
+            return total.concat(respuestasRight.text);
         },[]);
         
         return lista[0];
@@ -88,7 +89,7 @@ function animateTitle() {
             targets: '.ml2 .letter',
             scale: [4, 1],
             opacity: [0, 1],
-            translateZ: 0,
+            trrespuestaslateZ: 0,
             easing: "easeOutExpo",
             duration: 950,
             delay: (el, i) => 70 * i
@@ -103,16 +104,29 @@ function animateOptions() {
     anime.timeline()
         .add({
             targets: '.aoption',
-            translateX: 50,
+            trrespuestaslateX: 50,
             opacity: [0, 1],
             easing: "easeOutExpo",
-            duration: 900,
+            duration: 500,
             delay: (el, i) => 500 * i
         })
 }
 
-function animateBackground() {
-    
+function loadData(){
+    var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+      };
+      
+      fetch("http://127.0.0.1:8000/trivia/6", requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            data = result;
+            document.querySelector("#loading").style.display = "none"
+            document.querySelector("#start-button").style.display = "inline-block"
+        })
+        .catch(error => console.log('error', error));
 }
 
 window.addEventListener("load", animateTitle);
+window.addEventListener("load", loadData);

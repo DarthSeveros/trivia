@@ -42,10 +42,45 @@ label, p, .btn {
     height: 100px;
     background-position: 0px 0px;
     background-repeat: repeat-x;
-    animation: animatedBackground 40s linear infinite;
+    animation: animatedBackground 4s linear infinite;
+}
+
+#loading {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #6254FF;
+    border-top: 0px solid #6254FF;
+    position: relative;
+    border-radius: 50%;
+    animation: mymove 1s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mymove {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes animatedBackground {
     from { background-position: 0 0; }
     to { background-position: 100% 0; }
 }
+
+
+
+@media only screen and (min-width: 600px) {
+    .bg-design {
+        animation: animatedBackground 20s linear infinite;
+    }
+  }
+
+@media only screen and (min-width: 1200px) {
+    .bg-design {
+        animation: animatedBackground 40s linear infinite;
+    }
+  }

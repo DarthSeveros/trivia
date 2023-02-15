@@ -1,0 +1,216 @@
+{
+    "nombre": "Cuanto sabes de ",
+    "categoria": "geografia",
+    "preguntas": [
+        {
+            "texto": "¿Cual es la capital de Chile?",
+            "respuestas": [
+                {
+                    "valor": 1,
+                    "texto": "Santiago"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Temuco"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Medellin"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Buenos Aires"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Francia?",
+            "respuestas": [
+                {
+                    "valor": 0,
+                    "texto": "Madrid"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Berlin"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Praga"
+                },
+                {
+                    "valor": 1,
+                    "texto": "Paris"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Italia?",
+            "respuestas": [
+                {
+                    "valor": 0,
+                    "texto": "Milán"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Nápoles"
+                },
+                {
+                    "valor": 1,
+                    "texto": "Roma"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Venecia"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de España?",
+            "respuestas": [
+                {
+                    "valor": 1,
+                    "texto": "Madrid"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Valencia"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Barcelona"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Sevilla"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Japón?",
+            "respuestas": [
+                {
+                    "valor": 0,
+                    "texto": "Seul"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Fukushima"
+                },
+                {
+                    "valor": 1,
+                    "texto": "Tokio"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Okinawa"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de China?",
+            "respuestas": [
+                {
+                    "valor": 0,
+                    "texto": "Beijing"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Bangkok"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Hong Kong"
+                },
+                {
+                    "valor": 1,
+                    "texto": "Pekin"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Alemania?",
+            "respuestas": [
+                {
+                    "valor": 0,
+                    "texto": "Praga"
+                },
+                {
+                    "valor": 1,
+                    "texto": "Berlin"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Versalles"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Oslo"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Rusia?",
+            "respuestas": [
+                {
+                    "valor": 1,
+                    "texto": "Moscú"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Lima"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Tokio"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Lisboa"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Eslovenia?",
+            "respuestas": [
+                {
+                    "valor": 1,
+                    "texto": "Liubliana"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Doha"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Bruselas"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Beirut"
+                }
+            ]
+        },
+        {
+            "texto": "¿Cual es la capital de Lituania?",
+            "respuestas": [
+                {
+                    "valor": 0,
+                    "texto": "Luxemburgo"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Riga"
+                },
+                {
+                    "valor": 0,
+                    "texto": "Luanda"
+                },
+                {
+                    "valor": 1,
+                    "texto": "Vilna"
+                }
+            ]
+        }
+    ]
+}

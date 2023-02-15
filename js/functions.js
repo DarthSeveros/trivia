@@ -127,10 +127,7 @@ function loadData() {
             console.log('error', error);
             fetch("js/data.json")
             .then((res) => res.json())
-            .then((result) => {
-                data = result
-                console.log(data.preguntas)
-            });
+            .then((result) => data = result);
         })
         .finally(() => {
             document.querySelector("#loading").style.display = "none";

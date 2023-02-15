@@ -120,11 +120,8 @@ function loadData() {
 
     fetch("http://127.0.0.1:8000/trivia/6", requestOptions)
         .then(response => response.json())
-        .then(result => {
-            data = result;
-        })
+        .then(result => data = result)
         .catch(error => {
-            console.log('error', error);
             fetch("js/data.json")
             .then((res) => res.json())
             .then((result) => data = result);

@@ -112,20 +112,27 @@ function animateOptions() {
         })
 }
 
-function loadData(){
+function loadData() {
     var requestOptions = {
         method: 'GET',
         redirect: 'follow'
-      };
-      
-      fetch("http://127.0.0.1:8000/trivia/6", requestOptions)
+    };
+
+    fetch("http://127.0.0.1:8000/trivia/6", requestOptions)
         .then(response => response.json())
         .then(result => {
             data = result;
             document.querySelector("#loading").style.display = "none"
             document.querySelector("#start-button").style.display = "inline-block"
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+            console.log('error', error);
+            fetch("./data.json")
+        .then((res) => res.json())
+        .then((data) => data = data);
+        });
+    
+    
 }
 
 window.addEventListener("load", animateTitle);

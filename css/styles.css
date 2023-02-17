@@ -18,6 +18,17 @@ label, p, .btn {
     color: white;
 }
 
+.btn-outline-mora {
+    background-color: white;
+    color: #6254FF;
+    border: 2px solid #6254FF;
+}
+
+.btn-outline-mora:hover {
+    background-color: #6254FF;
+    color: white;
+}
+
 .form-check-input:checked {
     background-color: #6254FF;
     border-color: #6254FF;

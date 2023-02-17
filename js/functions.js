@@ -104,7 +104,7 @@ function animateOptions() {
     anime.timeline()
         .add({
             targets: '.aoption',
-            trrespuestaslateX: 50,
+            translateX: 50,
             opacity: [0, 1],
             easing: "easeOutExpo",
             duration: 500,
